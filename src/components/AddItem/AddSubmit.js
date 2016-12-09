@@ -1,5 +1,6 @@
 import { SubmissionError } from 'redux-form'
 import { additem } from 'actions/AppActions.js'
+import $ from 'jquery'
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
