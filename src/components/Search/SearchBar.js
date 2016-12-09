@@ -12,6 +12,7 @@ import SignUpInput from 'components/SignUp/SignupInput.js'
 import Redirect from 'react-router/Redirect'
 import Search from 'react-search'
 import styles from './SearchBar.css'
+import $ from 'jquery'
 
 class SearchBar extends React.Component{
   constructor (props) {
@@ -39,28 +40,6 @@ class SearchBar extends React.Component{
     });
   }
 
-  search() {
-    var input = document.querySelector('input')
-    var searchTerm = {term: input.value}
-    let url = `http://www.renters-circle.com:8080/RentersCircle/item/search`
-
-    return $.when($.ajax({
-      url: url,
-      type: 'POST',
-      contentType: 'application/json',
-      crossDomain: true,
-      data: JSON.stringify(searchTerm)
-    })).then(function(data, textStatus, jqXHR) {
-      if (data.status < 300) {
-        dispatch(itemlist(data.results))
-        this.setState({items: data.results, searched: true})
-      }
-    });
-
-    // ajax call to search api + searchTerm
-    // success: pass items to ItemList view
-  }
-
   render () {
     const { error, handleSubmit, pristine, reset, submitting, submitSucceeded } = this.props
     return (
@@ -75,7 +54,7 @@ class SearchBar extends React.Component{
   }
 }
 SearchBar = reduxForm({
-  form: 'submitValidation'
+  form: 'search'
 })(SearchBar);
 
 export default SearchBar

@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from 'components/app.js';
+import App from 'components/app';
 import { Provider } from 'react-redux'
 import { compose, createStore } from 'redux'
 import persistState from 'redux-localstorage'
 import reducers from 'reducers'
 
 const enhancer = compose(
-  persistState('user', {key: 'redux state'}),
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  persistState('user', {key: 'redux state'})
 )
 
 const store = createStore(reducers, enhancer);
@@ -23,5 +22,5 @@ class Main extends React.Component {
   }
 }
 
-const app = document.getElementById('app');
+const app = document.getElementById('root');
 ReactDOM.render(<Main />, app);

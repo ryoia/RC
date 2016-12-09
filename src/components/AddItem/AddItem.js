@@ -11,7 +11,7 @@ import Button from 'react-bootstrap/lib/Button'
 import { Field, reduxForm } from 'redux-form'
 import AddSubmit from './AddSubmit.js'
 import SignUpInput from 'components/SignUp/SignupInput.js'
-import DropImage from './DropImage'
+// import DropImage from './DropImage'
 var Dropzone = require('react-dropzone');
 import Redirect from 'react-router/Redirect'
 
