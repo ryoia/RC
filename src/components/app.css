@@ -1,0 +1,20 @@
+.li {
+  display: inline;
+  margin-right: 20px;
+  padding: 0 8px;
+  font-size: 20px;
+  line-height: 1.38462em;
+  line-height: 21px;
+}
+
+.bodyBackground {
+  min-width: 100%;
+}
+
+.headerBackground {
+  min-height: 50px;
+  background-color: #41BDAC;
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+}

@@ -1,0 +1,11 @@
+.body {
+  position: absolute;
+  background-color: #EEEEEE;
+  min-width: 100%;
+  top: 50px;
+  bottom: 50px;
+}
+
+.form {
+  text-align: center;
+}

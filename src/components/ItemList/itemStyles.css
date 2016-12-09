@@ -1,0 +1,27 @@
+.img {
+  width: 200px;
+  border-right: 12px solid transparent;
+  border-left: none;
+}
+
+.body {
+  text-align: center;
+  margin: 20px;
+}
+
+.header {
+  font-weight: normal;
+  margin-bottom: 6px;
+  display: block;
+  margin: 15px;
+}
+
+.itemHeader {
+  display: inline;
+  margin-right: 5px;
+}
+
+.description {
+  font-weight: bold;
+  font-size: 20px;
+}
